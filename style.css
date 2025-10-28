@@ -1,0 +1,141 @@
+
+    :root {
+      --bg: #0b3a63; /* deep blue */
+      --bg-secondary: #07335a; /* darker blue for gradient */
+      --accent: #ff7a00; /* orange */
+      --accent-hover: #e66a00; /* darker orange for hover */
+      --white: #ffffff;
+      --radius: 40px;
+      --gap: 18px;
+      --shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.25);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-secondary) 100%);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+    .card {
+      width: min(720px, 100%);
+      max-width: 720px;
+      padding: 48px 28px;
+      box-sizing: border-box;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--gap);
+      margin-bottom: 28px;
+    }
+    .logo svg {
+      width: 140px;
+      height: auto;
+    }
+    .brand {
+      font-size: 16px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      opacity: 0.95;
+    }
+    /* Buttons */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: stretch;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    a.btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 22px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      border: 4px solid rgba(255, 255, 255, 0.02);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+      justify-content: center;
+      outline: none;
+    }
+    a.btn:hover {
+      background-color: var(--accent-hover);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+    a.btn:focus {
+      box-shadow: var(--shadow), 0 0 0 3px rgba(255, 122, 0, 0.5);
+    }
+    a.btn:active {
+      transform: translateY(1px);
+    }
+    a.btn .ico {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+    }
+    /* Different size for location lines (two-line text) */
+    .small {
+      font-size: 15px;
+      padding: 14px 20px;
+      font-weight: 600;
+    }
+    /* Footer nav mimic */
+    .frame-controls {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 72px;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+    .frame-controls .dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+    }
+    /* Media queries for larger screens */
+    @media (min-width: 880px) {
+      body {
+        padding: 48px;
+      }
+      .card {
+        padding: 60px;
+      }
+      .logo svg {
+        width: 160px;
+      }
+    }
+ 
