@@ -45,11 +45,12 @@
       justify-content: center;
       gap: var(--gap);
       margin-bottom: 28px;
+      margin-bottom:-15px;
     }
-    .logo svg {
-      width: 140px;
-      height: auto;
+    .logo-unopar{
+      width: 200px;
     }
+
     .brand {
       font-size: 16px;
       letter-spacing: 1px;
