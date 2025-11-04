@@ -1,148 +1,141 @@
+/* ==============================
+   RESET E BASE
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    :root {
-      --bg: #0b3a63; /* deep blue */
-      --bg-secondary: #07335a; /* darker blue for gradient */
-      --accent: #ff7a00; /* orange */
-      --accent-hover: #e66a00; /* darker orange for hover */
-      --white: #ffffff;
-      --radius: 40px;
-      --gap: 18px;
-      --shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-      --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.25);
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
 
-    @media (max-width: 767px) {
-      .elementor-4912 .elementor-element.elementor-element-8db6da3 > .elementor-widget-container {
-        margin: 100px 0px 20px 0px;
-    }
-    
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    body {
-      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-secondary) 100%);
-      color: var(--white);
-      -webkit-font-smoothing: antialiased;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px;
-    }
-    .card {
-      width: min(720px, 100%);
-      max-width: 720px;
-      padding: 48px 28px;
-      box-sizing: border-box;
-      text-align: center;
-      opacity: 0;
-      animation: fadeIn 0.8s ease-out forwards;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-    /* Logo */
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--gap);
-      margin-bottom: 28px;
-      margin-bottom:-15px;
-    }
-    .logo-unopar{
-      width: 200px;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #003b80; /* Azul Unopar */
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  } 
 
-    .brand {
-      font-size: 16px;
-      letter-spacing: 1px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--white);
-      opacity: 0.95;
-    }
-    /* Buttons */
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      align-items: stretch;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-    a.btn {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 5px 22px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 500;
-      box-shadow: var(--shadow);
-      border: 4px solid rgba(255, 255, 255, 0.02);
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
-      justify-content: center;
-      outline: none;
-    }
-    a.btn:hover {
-      background-color: var(--accent-hover);
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-2px);
-    }
-    a.btn:focus {
-      box-shadow: var(--shadow), 0 0 0 3px rgba(255, 122, 0, 0.5);
-    }
-    a.btn:active {
-      transform: translateY(1px);
-    }
-    a.btn .ico {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 20px;
-      height: 20px;
-    }
-    /* Different size for location lines (two-line text) */
-    .small {
-      font-size: 15px;
-      padding: 14px 20px;
-      font-weight: 600;
-    }
-    /* Footer nav mimic */
-    .frame-controls {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 72px;
-      background: rgba(0, 0, 0, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 28px;
-    }
-    .frame-controls .dot {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.06);
-    }
-    /* Media queries for larger screens */
-    @media (min-width: 880px) {
-      body {
-        padding: 48px;
-      }
-      .card {
-        padding: 60px;
-      }
-      .logo svg {
-        width: 160px;
-      }
-    }
+/* ==============================
+   CARD PRINCIPAL
+============================== */
+.card {
+  text-align: center;
+  width: 100%;
+  max-width: 600px; /* aumentei para maior espaçamento nos botões */
+  padding: 2rem 1rem;
+    margin-bottom: 300px;
+}
+
+/* ==============================
+   LOGO E TÍTULO
+============================== */
+.logo-unopar {
+  width: 180px; /* mais próximo da imagem */
+  height: auto;
+  transition: all 0.4s ease;
+  margin: 0 auto; /* centralizar logo */
+  display: block;
+  margin-bottom: 2rem; /* espaço entre logo e botões */
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+/* ==============================
+   LINKS / BOTÕES
+============================== */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem; /* mais espaçamento entre botões */
+  margin-top: 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  background-color: #ff6600; /* Laranja mais forte e saturado */
+  color: #fff;
+  font-weight: 700; /* mais forte */
+  padding: 0.5rem 0; /* altura maior dos botões com padding vertical */
+  border-radius: 30px; /* cantos arredondados mais suaves */
+  font-size: 1rem;
+  width: 100%; /* largura menor (em desktop) */
  
+  box-shadow: none; /* removi sombra para igualar imagens */
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e65c00; /* escurece levemente sem movimento */
+  transform: none;
+  box-shadow: none;
+}
+
+.btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+/* Telas pequenas (celulares) */
+@media (max-width: 480px) {
+  
+
+  .logo-unopar {
+    width: 220px; /* logo maior na tela pequena */
+    margin-bottom: 0.8rem;
+  }
+
+ 
+  .btn svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* Telas médias e grandes (tablets e desktops) */
+@media (min-width: 490px) {
+  .logo-unopar {
+    width: 150px; /* logo menor que mobile mas maior que original */
+    margin-bottom: 2.5rem;
+  }
+   
+    .card {
+    padding: 1.5rem 1rem;
+    max-width: 100%; /* ocupar toda a largura */
+  }
+
+  .btn {
+    width: 90%; /* botões mais estreitos para desktop */
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    gap: 0.8rem;
+  }
+
+  /* nenhuma transformação ou sombra no hover */
+  .btn:hover {
+    transform: none;
+  }
+}
